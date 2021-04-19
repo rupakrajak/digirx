@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Fredoka+One&family=Varela+Round&display=swap");
+
+
+.Dashboard {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 0 0 50% 50%;
+}
+
+.Dashboard #input-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Dashboard input {
+    width: 300px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(223, 223, 223);
+    margin-right: 10px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.Dashboard button {
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(115, 255, 122);
+    outline: none;
+}
+
+.Dashboard button:hover {
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(102, 231, 108);
+    cursor: pointer;
+}
+
+.Dashboard img {
+    height: 40px;
+    width: 40px;
+}
+
+

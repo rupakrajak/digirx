@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Fredoka+One&family=Varela+Round&display=swap");
+
+/*************************/
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+}
+.loader {
+    color: rgb(100, 167, 23);
+    font-size: 10px;
+    margin: auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    top: 0;
+}
+.loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.loader:after {
+    left: 3.5em;
+}
+@-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+@keyframes load7 {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+/*************************/
+
+.SignIn {
+    height: 100%;
+    width: 100%;
+    background: rgb(138, 255, 0);
+    background: linear-gradient(
+        90deg,
+        rgb(238, 255, 0) 0%,
+        rgb(133, 238, 47) 50%,
+        rgb(38, 212, 35) 100%
+    );
+}
+
+.SignIn .modal {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.SignIn #display-card {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    border-radius: 40px;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SignIn #image {
+    height: max-content;
+    width: max-content;
+}
+
+.SignIn #image img {
+    height: 300px;
+}
+
+.SignIn #form {
+    padding: 40px;
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.SignIn #form button {
+    margin: 5px;
+    padding: 10px;
+    font-family: "Varela Round", sans-serif;
+    border: none;
+    width: 300px;
+    background-color: rgb(59, 177, 255);
+    border-radius: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.SignIn #form button:hover {
+    background-color: #308fce;
+}
+
+.SignIn #form button:disabled {
+    background-color: #9bd7ff;
+}
+
+.SignIn #form button:focus,
+.SignIn #input-area input:focus {
+    outline: none;
+}
+
+.SignIn #input-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.SignIn #input-area input {
+    margin: 5px;
+    padding: 10px;
+    font-family: "Varela Round", sans-serif;
+    border: none;
+    width: 300px;
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+}
+
+.SignIn #no-acc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.SignIn #no-acc h6 {
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: "Varela Round", sans-serif;
+    font-size: 13px;
+}
+
+.SignIn #no-acc h6:nth-child(2) {
+    color: rgb(92, 173, 0);
+    cursor: pointer;
+}
+
+.SignIn .hidden {
+    display: none;
+}

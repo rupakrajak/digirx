@@ -1,0 +1,55 @@
+{
+    "Undergraduate": [
+        {
+            "name": "Bachelor of Medicine, Bachelor of Surgery",
+            "abbreviation": "M.B.B.S."
+        },
+        {
+            "name": "Bachelor of Dental Surgery",
+            "abbreviation": "B.D.S."
+        },
+        {
+            "name": "Bachelor of Ayurvedic Medicine and Surgery",
+            "abbreviation": "B.A.M.S."
+        },
+        {
+            "name": "Bachelor of Unani Medicine and Surgery",
+            "abbreviation": "B.U.M.S."
+        },
+        {
+            "name": "Bachelor of Homeopathy Medicine and Surgery",
+            "abbreviation": "B.H.M.S."
+        },
+        {
+            "name": "Bachelor of Yoga and Naturopathy Sciences",
+            "abbreviation": "B.Y.N.S."
+        },
+        {
+            "name": "Bachelor of Veterinary Sciences and Animal Husbandry",
+            "abbreviation": "B.V.Sc. & A.H."
+        }
+    ],
+    
+    "Postgraduate": [
+        {
+            "name": "Doctor of Medicine",
+            "abbreviation": "M.D."
+        },
+        {
+            "name": "Master of Medicine",
+            "abbreviation": "M.S."
+        },
+        {
+            "name": "Diplomate of National Board",
+            "abbreviation": "D.N.B."
+        },
+        {
+            "name": "Doctorate of Medicine",
+            "abbreviation": "D.M."
+        },
+        {
+            "name": "Master of Chirurgiae",
+            "abbreviation": "M.Ch."
+        }
+    ]
+}

@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/users", require("./routes/users"));
 app.use("/clinical-labs", require("./routes/clinical-labs"));
+app.use("/prescription", require("./routes/prescription"))
 
 // app.get("/", (req, res) => {
 //     res.json({

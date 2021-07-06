@@ -7,12 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100000;
 }
 
 .ReceiverScreen #panel {
     height: 40em;
     width: 25em;
-    background-color: rgba(255, 255, 255, 0.562);
+    /* background-color: rgba(255, 255, 255, 0.562); */
+    background-color: rgb(237, 255, 213);
     box-shadow: 0 0 40px rgb(54, 148, 0);
     border-radius: 30px;
     object-fit: contain;

@@ -36,6 +36,7 @@
     transform: rotate(360deg);
   }
 } */
-/* .App {
-  position: relative;
-} */
+
+.App {
+  overflow-y: auto;
+}

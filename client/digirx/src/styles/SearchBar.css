@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Fredoka+One&family=Varela+Round&display=swap");
+
+.SearchBar input {
+    width: 100%;
+    margin: 0;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.842);
+}
+
+.SearchBar #suggestion {
+    background-color: white;
+    color: rgb(36, 36, 36);
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    left: 0px;
+    font-family: "Varela Round", sans-serif;
+}
+
+.SearchBar #react-autowhatever-autosuggest {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.SearchBar .react-autosuggest__suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.SearchBar .react-autosuggest__suggestions-container--open {
+    background-color: rgb(182, 248, 166);
+    border-radius: 5px;
+    margin-top: 5px;
+}

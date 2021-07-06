@@ -6,6 +6,7 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Dashboard from "./components/Dashboard";
 import VideoCall from "./components/VideoCall";
+import WritePrescription from "./components/WritePrescription";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -23,6 +24,10 @@ function App() {
                             exact
                             path="/dashboard/video-call"
                             component={VideoCall}
+                        />
+                        <Route
+                            path="/dashboard/write-prescription"
+                            component={WritePrescription}
                         />
                         <Route component={NotFound} />
                     </Switch>

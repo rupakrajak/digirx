@@ -148,25 +148,74 @@ router.post("/register", async (req, res, next) => {
         err.status = 422;
         switch (req.body.category) {
             case "health-worker":
-                await HealthWorker.findByIdAndDelete(temp._id);
+                if (temp) await HealthWorker.findByIdAndDelete(temp._id);
                 break;
             case "pharmacy":
-                await Pharmacy.findByIdAndDelete(temp._id);
+                if (temp) await Pharmacy.findByIdAndDelete(temp._id);
                 break;
             case "hospital":
-                await Hospital.findByIdAndDelete(temp._id);
+                if (temp) await Hospital.findByIdAndDelete(temp._id);
                 break;
             case "clinical-lab":
-                await ClinicalLab.findByIdAndDelete(temp._id);
+                if (temp) await ClinicalLab.findByIdAndDelete(temp._id);
                 break;
         }
         next(err);
     }
 });
 
+router.get("/search/:category", async (req, res, next) => {
+    const category = req.params.category;
+    const query = req.query.query;
+    console.log(category, query);
+    const pipeline = [
+        {
+            "$search": {
+                "index": "users",
+                "compound": {
+                    "must": [
+                        {
+                            "autocomplete": {
+                                "query": query,
+                                "path": "name.firstname",
+                            },
+                        },
+                        {
+                            "queryString": {
+                                "defaultPath": "category",
+                                "query": category,
+                            },
+                        },
+                    ],
+                },
+            },
+        },
+        {
+            "$facet": {
+                "totalCount": [{ "$count": "count" }],
+                "results": [{ "$limit": 100 }],
+            },
+        },
+    ];
+
+    if (category === "health-worker")
+        pipeline.splice(1, 0, {
+            "$lookup": {
+                from: "healthworkers",
+                localField: "additional_properties",
+                foreignField: "_id",
+                as: "details"
+            }
+        })
+
+    const results = await User.aggregate(pipeline).exec();
+    console.log(results);
+    res.send(results);
+});
+
 router.post("/auth", async (req, res, next) => {
     try {
-        const body = req.body.body  ;
+        const body = req.body.body;
         console.log(body);
         const user = await User.find({ email: body.email });
         if (user.length === 0) {

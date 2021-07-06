@@ -8,7 +8,7 @@ const AppContext = createContext();
 const AppContextProvider = ({ children }) => {
     const history = useHistory();
     const [id, setId] = useState("");
-    const [partnerID, setPartnerID] = useState("");
+    const [partnerID, setPartnerID] = useState("moriah46@yahoo.com");
     const [isCalling, setIsCalling] = useState(false);
     const [isReceiving, setIsReceiving] = useState(false);
     const [stream, setStream] = useState(null);
